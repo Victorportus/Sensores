@@ -1,4 +1,5 @@
 from sds011 import *
+
 import time
 sensor = SDS011("/dev/ttyUSB0")
 sensor.sleep(sleep=False)

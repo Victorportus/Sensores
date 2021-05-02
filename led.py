@@ -1,10 +1,10 @@
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False) 
+GPIO.setwarnings(False)
 
 import time
 
-pin = int(input("Que led desea prender?"))
+pin = int(input("Que led desea prender?  "))
 
 def prender(p):
     GPIO.setup(p, GPIO.OUT)
@@ -13,9 +13,8 @@ def prender(p):
     
 def apagar(p):
     GPIO.output(p, GPIO.LOW)
-    
-while True:
-    prender(pin)
-    time.sleep(2.0)
-    apagar(pin)
-    time.sleep(2.0)
+
+prender(pin)
+time.sleep(2.0)
+apagar(pin)
+
